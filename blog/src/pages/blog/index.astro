@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -7,11 +7,9 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Layout title="HST的个人博客">
+<Layout title="博客文章">
     <main>
-        <h1>HST的个人博客</h1>
-        <p>欢迎来到我的博客 ✨</p>
-        <h2>最新文章</h2>
+        <h1>博客文章</h1>
         <ul class="post-list">
             {posts.map((post) => (
                 <li>
